@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Account — Thread & Tailor</title>
+<link rel="stylesheet" href="/css/style.css"></head><body>
+<div class="header"><div class="container header-inner"><a href="/" class="logo"><span class="logo-badge">TT</span> Thread & Tailor</a></div></div>
+<main class="container section">
+  <h1>My Account</h1>
+  <div id="tier" class="mt-16 text-muted">Loading membership…</div>
+  <div class="cards mt-16">
+    <a class="card" href="/orders/index.html"><h3>Orders</h3></a>
+    <a class="card" href="/membership/index.html"><h3>Membership</h3></a>
+    <a class="card" href="/referrals/index.html"><h3>Refer a Friend</h3></a>
+  </div>
+</main>
+<script>
+(async function(){
+  try{
+    const uid = 42;
+    const res = await fetch('http://localhost:5050/membership/'+uid);
+    const data = await res.json();
+    document.getElementById('tier').textContent = `Membership: ${data.tier}`;
+  }catch(e){ document.getElementById('tier').textContent = 'Membership: unknown'; }
+})();
+</script>
+</body></html>

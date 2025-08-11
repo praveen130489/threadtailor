@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment — Thread & Tailor</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>.sticky-cta{position:sticky;bottom:0;background:var(--surface);border-top:1px solid rgba(255,255,255,0.06);padding:12px}</style>
+</head><body>
+<div class="header"><div class="container header-inner"><a href="/" class="logo"><span class="logo-badge">TT</span> Thread & Tailor</a></div></div>
+<main class="container section">
+  <div class="kicker">Step 2 of 2</div>
+  <h1>Payment</h1>
+  <form class="mt-16" onsubmit="event.preventDefault(); window.dataLayer.push({event:'purchase', value: TTCart.get()||1999}); alert('Order placed!')">
+    <label>Card number<br><input inputmode="numeric" autocomplete="cc-number" required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--surface);color:var(--text)"></label>
+    <div class="row mt-16">
+      <label>Expiry<br><input inputmode="numeric" autocomplete="cc-exp" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--surface);color:var(--text)"></label>
+      <label>CVV<br><input inputmode="numeric" autocomplete="cc-csc" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--surface);color:var(--text)"></label>
+    </div>
+    <div class="mt-16 small text-muted">Estimated delivery: <strong>Aug 18–20</strong></div>
+    <div class="sticky-cta"><button class="btn btn-primary" data-ev="complete_purchase">Complete Purchase</button></div>
+  </form>
+</main>
+<script defer src="/js/main.js"></script>
+</body></html>

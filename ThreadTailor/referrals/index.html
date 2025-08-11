@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invite — Thread & Tailor</title>
+<link rel="stylesheet" href="/css/style.css"></head><body>
+<main class="container section">
+  <h1>Welcome to Thread & Tailor</h1>
+  <p class="text-muted">Your referral is being applied…</p>
+  <div id="status" class="mt-16"></div>
+</main>
+<script>
+(async function(){
+  const p = new URLSearchParams(location.search); const code = p.get('code');
+  const el = document.getElementById('status');
+  if(!code){ el.textContent = 'Missing referral code'; return; }
+  try{
+    const res = await fetch('http://localhost:5050/referrals',{method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({ code, source:'landing' })});
+    const data = await res.json();
+    if(data.ok){ el.textContent = 'Referral applied! You will get ₹500 on your first purchase.'; }
+    else{ el.textContent = 'Could not apply referral.' }
+  }catch(e){ el.textContent = 'Network error applying referral'; }
+})();
+</script>
+</body></html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Thread & Tailor</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>.sticky-cta{position:sticky;bottom:0;background:var(--surface);border-top:1px solid rgba(255,255,255,0.06);padding:12px}</style>
+</head><body>
+<div class="header"><div class="container header-inner"><a href="/" class="logo"><span class="logo-badge">TT</span> Thread & Tailor</a></div></div>
+<main class="container section">
+  <div class="kicker">Step 1 of 2</div>
+  <h1>Shipping</h1>
+  <form class="mt-16" onsubmit="event.preventDefault(); location.href='/checkout/payment.html'">
+    <label>Full name<br><input required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--surface);color:var(--text)"></label>
+    <div class="row mt-16">
+      <label style="flex:1">Address<br><input required placeholder="Autocomplete..." style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--surface);color:var(--text)"></label>
+      <label style="width:200px">Pincode<br><input required pattern="\\d{6}" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--surface);color:var(--text)"></label>
+    </div>
+    <div class="mt-16 small text-muted">Estimated delivery: <strong>Aug 18–20</strong></div>
+    <div class="sticky-cta"><button class="btn btn-primary" data-ev="continue_to_payment">Continue to payment</button></div>
+  </form>
+</main>
+<footer class="footer"><div class="container"><small>© Thread & Tailor</small></div></footer>
+<script defer src="/js/main.js"></script>
+</body></html>
