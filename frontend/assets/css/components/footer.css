@@ -1,0 +1,3 @@
+#site-footer{border-top:1px solid var(--border);padding:24px 16px;margin-top:24px;color:var(--muted)}
+#site-footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){#site-footer .cols{grid-template-columns:1fr 1fr}}

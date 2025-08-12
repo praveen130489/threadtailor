@@ -1,0 +1,4 @@
+.product-card{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.product-card .body{padding:12px}
+.product-card .title{font-weight:600}
+.product-card .price{margin-top:4px}

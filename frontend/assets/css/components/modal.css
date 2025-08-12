@@ -1,0 +1,4 @@
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:#fff;border-radius:12px;padding:16px;max-width:720px;width:95vw}
+.modal-close{position:absolute;right:8px;top:8px;border:0;background:#fff;font-size:24px}

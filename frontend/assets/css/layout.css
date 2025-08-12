@@ -1,0 +1,7 @@
+header,footer{border-bottom:1px solid var(--border)}
+main{min-height:60vh}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:24px;margin:24px 0}
+.hero .cta-row{display:flex;align-items:center;gap:12px;margin-top:12px}
+.category-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}
+.category-tiles .tile{border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.category-tiles{grid-template-columns:repeat(2,1fr)}}
