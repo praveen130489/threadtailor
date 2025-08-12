@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — Thread & Tailor</title>
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components/header.css" />
+  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+  <main id="content" class="container">
+    <h1>Checkout</h1>
+    <div id="progress">Step 1 of 2</div>
+    <form id="checkout-form">
+      <fieldset>
+        <legend>Shipping Address</legend>
+        <input required name="name" placeholder="Full Name" />
+        <input required name="line1" placeholder="Address line 1" />
+        <input name="line2" placeholder="Address line 2" />
+        <input required name="city" placeholder="City" />
+        <input required name="state" placeholder="State" />
+        <input required name="postalCode" placeholder="Pin Code" />
+        <input required name="phone" placeholder="Phone" />
+      </fieldset>
+      <div id="eta"></div>
+      <button type="submit" class="btn btn-primary sticky-cta">Complete Purchase</button>
+    </form>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="/assets/js/lib/analytics.js" defer></script>
+  <script src="/assets/js/lib/api.js" defer></script>
+  <script src="/assets/js/components/header.js" defer></script>
+  <script src="/assets/js/components/footer.js" defer></script>
+  <script src="/assets/js/pages/checkout.js" defer></script>
+</body>
+</html>

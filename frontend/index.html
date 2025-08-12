@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thread & Tailor — Premium Fashion</title>
+  <meta name="description" content="Premium, breathable, tailored fashion. Free shipping over ₹1,499. Secure checkout." />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preload" href="/assets/css/base.css" as="style" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components/header.css" />
+  <link rel="stylesheet" href="/assets/css/components/hero.css" />
+  <link rel="stylesheet" href="/assets/css/components/product-card.css" />
+  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+</head>
+<body>
+  <div id="free-shipping-bar" aria-live="polite"></div>
+  <header id="site-header"></header>
+
+  <main id="content" class="container">
+    <section class="promo-banner" role="status">
+      <p>Limited time: Extra 10% off 3+ items. Use code: TT10</p>
+    </section>
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-copy">
+        <h1>All-day comfort. Tailored for you.</h1>
+        <p class="sub">Organic cotton, breathable, and cut to move.</p>
+        <p class="trust">⭐ 4.7 average • 10,000+ reviews</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/category.html?slug=products">Shop Now</a>
+          <small class="micro">Free shipping over ₹1,499 • Secure checkout</small>
+        </div>
+      </div>
+      <picture>
+        <source srcset="/assets/images/hero.avif" type="image/avif" />
+        <img src="/assets/images/hero.webp" alt="Models wearing Thread & Tailor" width="1280" height="720" />
+      </picture>
+    </section>
+
+    <nav class="category-tiles" aria-label="Shop by category">
+      <a href="/category.html?slug=products" class="tile">Products</a>
+      <a href="/category.html?slug=promotional-offers" class="tile">Promotional Offers</a>
+      <a href="/category.html?slug=featured" class="tile">Featured</a>
+      <a href="/category.html?slug=celebrity-collections" class="tile">Celebrity Collections</a>
+    </nav>
+
+    <section id="home-featured" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured</h2>
+      <div id="featured-grid" class="grid"></div>
+    </section>
+
+    <section id="ugc" aria-labelledby="ugc-title">
+      <h2 id="ugc-title">Spotted in the wild</h2>
+      <div class="grid" id="ugc-grid"></div>
+    </section>
+
+    <section id="reviews" aria-labelledby="reviews-title">
+      <h2 id="reviews-title">What customers say</h2>
+      <div id="review-feed"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <script src="/assets/js/lib/analytics.js" defer></script>
+  <script src="/assets/js/lib/api.js" defer></script>
+  <script src="/assets/js/components/header.js" defer></script>
+  <script src="/assets/js/components/footer.js" defer></script>
+  <script src="/assets/js/components/freeShippingBar.js" defer></script>
+  <script src="/assets/js/pages/home.js" defer></script>
+  <script src="/assets/js/lib/pwa.js" defer></script>
+</body>
+</html>

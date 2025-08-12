@@ -1,62 +1,34 @@
-# Thread & Tailor — PRD Handoff
+# Thread & Tailor (Modular E‑commerce Skeleton)
 
-## Stack
-- Static prototype (HTML/CSS/JS) for storefront IA and CRO patterns
-- Node/Express API scaffold in `services/api`
-- Ready to upgrade to Next.js or headless CMS
+Modular HTML/CSS/JS frontend with a Node.js + Express API and optional MongoDB.
 
-## IA & Navigation
-- Header: Home, Products, Promotional Offers, Featured, Celebrity Collections, Blog, Help, My Account
-- Footer: Shop, Help, Account
+## Quickstart
 
-## Pages
-- Home: Promise+Proof hero, categories, social proof tiers, UGC, celebrity feature
-- Category: `/products/index.html`
-- PDP: `/products/product.html`
-- Cart: `/cart/index.html`
-- Checkout: `/checkout/index.html`
-- Account: `/auth/login.html`, `/auth/signup.html`
-- Help/FAQs: `/faqs/index.html`
-- Membership: `/membership/index.html`
-- Blog: `/blogs/index.html`
-- Featured, Celebrity, Offers
+1. Install deps: `npm install`
+2. (Optional) Set `MONGODB_URI` in `.env` to enable database.
+3. Dev server: `npm run dev`
+4. Open: http://localhost:3000
 
-## CRO Elements
-- Free-shipping progress bar (sticky)
-- Limited-time banner with countdown
-- Price anchoring with 3-pack, Most Popular
-- Urgency cues (viewers, low stock)
-- Social proof layering and filters
-- Mobile sticky checkout CTA
+If `MONGODB_URI` is not provided, the API serves demo in-memory data so the UI works.
 
-## SEO
-- Product and FAQ schema
-- Clean URLs and meta descriptions
-- Image optimization with WebP/AVIF placeholders
+## Structure
 
-## Analytics
-- dataLayer hooks for: product_click, add_to_cart, begin_checkout, purchase
-- Session recording hooks placeholder
+- `server/`: Express API, models, routes, middleware
+- `frontend/`: Static HTML, CSS, JS (components + pages), PWA assets
 
-## AI Try-On
-- Camera overlay modal prototype in `/js/tryon.js`
-- Upgrade path: MediaPipe or third-party SDK
+## Env
 
-## Membership
-- Free vs Premium tiers (copy and IA)
-- API placeholder for membership check
+- `PORT` (default 3000)
+- `MONGODB_URI` (optional)
+- `GTAG_ID` (optional GA4)
+- `GTM_ID` (optional GTM)
 
-## Performance Targets
-- Lazy-load UGC images
-- Preloads; progressive enhancement
+## Scripts
 
-## 90-Day CRO Roadmap (abridged)
-- Weeks 1–2: Establish baseline analytics, heatmaps, funnel, QA
-- Weeks 3–6: A/B test hero copy/CTAs, shipping messaging, progress bar variants
-- Weeks 7–10: PDP image order, price anchoring variants, try-on prompts, review density
-- Weeks 11–13: Checkout field minimization, EDD variants, payment button labels
-- Continuous: Offer banners, UGC prompts, referral incentives
+- `npm run dev` – start server with nodemon
+- `npm start` – start server in production
 
-## Dev Notes
-- Run API: `cd services/api && npm run dev`
-- Serve static: use any static server (e.g., `npx serve .`)
+## Notes
+
+- Accessible, performant by default with PWA, lazy-loading hooks, and structured data utilities.
+- AI Try-On stub uses camera access; prompts for permission on PDP.

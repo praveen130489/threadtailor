@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product — Thread & Tailor</title>
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components/header.css" />
+  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+  <link rel="stylesheet" href="/assets/css/components/tryon.css" />
+  <link rel="stylesheet" href="/assets/css/components/modal.css" />
+  <link rel="stylesheet" href="/assets/css/components/review.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+  <main id="content" class="container">
+    <section id="pdp" class="pdp">
+      <div class="pdp-gallery">
+        <div id="pdp-images"></div>
+      </div>
+      <div class="pdp-info">
+        <h1 id="pdp-title"></h1>
+        <p id="pdp-desc"></p>
+        <div id="pdp-price"></div>
+        <div class="pdp-cta">
+          <button id="add-to-cart" class="btn btn-primary">Add to Cart</button>
+          <small class="micro">Free returns in 30 days • Ships tomorrow</small>
+        </div>
+        <button id="tryon-btn" class="btn btn-secondary">AI Try-On</button>
+        <div id="urgency" class="micro"></div>
+        <div id="quick-facts"></div>
+        <div id="fit-guide" class="micro">If you prefer slim fit, size down.</div>
+      </div>
+    </section>
+
+    <section id="faq" class="accordion"></section>
+
+    <section id="related" aria-labelledby="related-title">
+      <h2 id="related-title">You may also like</h2>
+      <div class="grid" id="related-grid"></div>
+    </section>
+
+    <section id="pdp-reviews" aria-labelledby="pdp-reviews-title">
+      <h2 id="pdp-reviews-title">Reviews</h2>
+      <div id="pdp-review-list"></div>
+    </section>
+
+    <div id="tryon-modal" class="modal" aria-hidden="true" role="dialog" aria-label="AI Try-On">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close" id="tryon-close">×</button>
+        <video id="tryon-video" autoplay playsinline></video>
+        <canvas id="tryon-canvas"></canvas>
+        <div class="modal-actions">
+          <button id="save-look" class="btn">Save look</button>
+          <button id="share-look" class="btn">Share</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <script src="/assets/js/lib/analytics.js" defer></script>
+  <script src="/assets/js/lib/api.js" defer></script>
+  <script src="/assets/js/components/header.js" defer></script>
+  <script src="/assets/js/components/footer.js" defer></script>
+  <script src="/assets/js/components/faqAccordion.js" defer></script>
+  <script src="/assets/js/components/reviewList.js" defer></script>
+  <script src="/assets/js/lib/tryon.js" defer></script>
+  <script src="/assets/js/pages/product.js" defer></script>
+  <script src="/assets/js/lib/pwa.js" defer></script>
+</body>
+</html>
